@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="青山几重">
+  
+  
+  
+  <link rel="prev" href="/2021/js%E7%9A%84%E4%B8%80%E4%BA%9Btips/" />
+  <link rel="next" href="/2021/%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/" />
+  <link rel="canonical" href="/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           键盘按键事件详解 | 青山几重的博客
+       
+  </title>
+  <meta name="title" content="键盘按键事件详解 | 青山几重的博客">
+    
+
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": ""
+    },
+    "articleSection" : "posts",
+    "name" : "键盘按键事件详解",
+    "headline" : "键盘按键事件详解",
+    "description" : "KeyDown 触发后，不一定触发 KeyUp，当 KeyDown 按下后，拖动鼠标，那么将不会触发 KeyUp 事件。 KeyPress 主要用来捕获数字(注意：包括 Shift\u002b数字的符号)、字母（注",
+    "inLanguage" : "zh-cn",
+    "author" : "青山几重",
+    "creator" : "青山几重",
+    "publisher": "青山几重",
+    "accountablePerson" : "青山几重",
+    "copyrightHolder" : "青山几重",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-03-12 13:41:34 \u002b0800 CST",
+    "dateModified" : "2021-03-12 13:41:34 \u002b0800 CST",
+    "url" : "\/2021\/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3\/",
+    "wordCount" : "492",
+    "keywords" : [ "keycode","按键事件","js", "青山几重的博客"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    
+    <div class="top-scroll-bar"></div>
+    
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">青山几重的博客</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+    <div class="top-scroll-bar"></div>
+    
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">青山几重的博客</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">键盘按键事件详解</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="" rel="author">青山几重</a> with ♥
+                <span class="post-time">
+                on <time datetime=2021-03-12 itemprop="datePublished">March 12, 2021</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="/categories/%E5%89%8D%E7%AB%AF/"> 前端 </a>
+                        
+                </span>
+            <span class="post-word-count">, 492 words</span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+
+          
+          
+          
+
+          
+          
+          
+
+          <ul>
+<li>KeyDown 触发后，不一定触发 KeyUp，当 KeyDown 按下后，拖动鼠标，那么将不会触发 KeyUp 事件。</li>
+<li>KeyPress 主要用来捕获数字(注意：包括 Shift+数字的符号)、字母（注意：包括大小写）、小键盘等除了 F1-12、SHIFT、Alt、Ctrl、Insert、Home、PgUp、Delete、End、PgDn、ScrollLock 、Pause、NumLock、{菜单键}、{开始键}和方向键外的 ANSI 字符</li>
+<li>KeyDown 和 KeyUp 通常可以捕获键盘除了 PrScrn 所有按键(这里不讨论特殊键盘的特殊键）</li>
+<li>KeyPress 只能捕获单个字符</li>
+<li>KeyDown 和 KeyUp 可以捕获组合键。</li>
+<li>KeyPress 可以捕获单个字符的大小写</li>
+<li>KeyDown 和 KeyUp 对于单个字符捕获的 KeyValue 都是一个值，也就是不能判断单个字符的大小写。</li>
+<li>KeyPress 不区分小键盘和主键盘的数字字符。</li>
+<li>KeyDown 和 KeyUp 区分小键盘和主键盘的数字字符。</li>
+<li>其中 PrScrn 按键 KeyPress、KeyDown 和 KeyUp 都不能捕获。
+在使用键盘的时候，通常会使用到 CTRL+SHIFT+ALT 类似的组合键功能。对于此，我们如何来判定？</li>
+<li>通过 KeyUp 事件能够来处理（这里说明一下为什么不用 KeyDown，因为在判定 KeyDown 的时候，CTRL、SHIFT 和 ALT 属于一直按下状态，然后再加另外一个键是不能准确捕获组合键，所以使用 KeyDown 是不能准确判断出的，要通过 KeyUp 事件来判定 ）</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>青山几重 </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="tags/keycode/">
+                    #keycode</a></span>
+            
+            <span class="tag"><a href="tags/%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6/">
+                    #按键事件</a></span>
+            
+            <span class="tag"><a href="tags/js/">
+                    #js</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="/2021/js%E7%9A%84%E4%B8%80%E4%BA%9Btips/" class="prev" rel="prev" title="js的一些tips"><i class="iconfont icon-left"></i>&nbsp;js的一些tips</a>
+        
+        
+        <a href="/2021/%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/" class="next" rel="next" title="页面滚动">页面滚动&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="">青山几重</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+
+
+
+
+     </div>
+  </body>
+</html>

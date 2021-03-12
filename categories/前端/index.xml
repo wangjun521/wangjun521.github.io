@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on 青山几重的博客</title>
+    <link>/categories/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on 青山几重的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 12 Mar 2021 13:47:18 +0800</lastBuildDate><atom:link href="/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重置css样式</title>
+      <link>/2021/%E9%87%8D%E7%BD%AEcss%E6%A0%B7%E5%BC%8F/</link>
+      <pubDate>Fri, 12 Mar 2021 13:47:18 +0800</pubDate>
+      
+      <guid>/2021/%E9%87%8D%E7%BD%AEcss%E6%A0%B7%E5%BC%8F/</guid>
+      <description>@charset &amp;#34;utf-8&amp;#34;; * { -webkit-box-sizing: border-box; box-sizing: border-box; } /*禁止文本缩放 字体设置 取消touch高亮效果 */ html { width: 100%; height: 100%; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; font-family: system-ui, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background:</description>
+    </item>
+    
+    <item>
+      <title>页面滚动</title>
+      <link>/2021/%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</link>
+      <pubDate>Fri, 12 Mar 2021 13:42:51 +0800</pubDate>
+      
+      <guid>/2021/%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</guid>
+      <description>scrollingElement 该对象可以非常兼容地获取 scrollTop、scrollHeight 等属性，在移动端跟 PC 端都屡试不爽document.scrollingE</description>
+    </item>
+    
+    <item>
+      <title>键盘按键事件详解</title>
+      <link>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Fri, 12 Mar 2021 13:41:34 +0800</pubDate>
+      
+      <guid>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</guid>
+      <description>KeyDown 触发后，不一定触发 KeyUp，当 KeyDown 按下后，拖动鼠标，那么将不会触发 KeyUp 事件。 KeyPress 主要用来捕获数字(注意：包括 Shift+数字的符号)、字母（注</description>
+    </item>
+    
+    <item>
+      <title>js的一些tips</title>
+      <link>/2021/js%E7%9A%84%E4%B8%80%E4%BA%9Btips/</link>
+      <pubDate>Fri, 12 Mar 2021 13:32:01 +0800</pubDate>
+      
+      <guid>/2021/js%E7%9A%84%E4%B8%80%E4%BA%9Btips/</guid>
+      <description>数组中根据对象某一属性排序 function compare(property) { return function(a, b) { var value1 = a[property]; var value2 = b[property]; return value1 - value2; }; } 数据去重 function removeRepeatArray(arr) { return arr.filter(function(item, index, self) { return self.indexOf(item) === index; }); } 数组打乱顺序 function upsetArr(arr) { return arr.sort(function() { return Math.random() - 0.5; }); }</description>
+    </item>
+    
+    <item>
+      <title>css的一些tips</title>
+      <link>/2021/css%E7%9A%84%E4%B8%80%E4%BA%9Btips/</link>
+      <pubDate>Fri, 12 Mar 2021 13:31:43 +0800</pubDate>
+      
+      <guid>/2021/css%E7%9A%84%E4%B8%80%E4%BA%9Btips/</guid>
+      <description>消除taransition闪屏 .css { transform: translate3d(0,0,0); } 全局背景图 html { background: url(&amp;#39;bg.jpg&amp;#39;) no-repeat center center fixed; background-size: cover; } 自定义文本选择 ::selection{background: red;} 使页面字体变细变清晰 -webkit-font-smoothing: antialiased; 长按禁止 // 禁止长按图片保存</description>
+    </item>
+    
+  </channel>
+</rss>
