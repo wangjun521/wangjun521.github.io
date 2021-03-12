@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>js on 青山几重的博客</title>
-    <link>/tags/js/</link>
+    <link>https://wangjun521.github.io/tags/js/</link>
     <description>Recent content in js on 青山几重的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 12 Mar 2021 13:42:51 +0800</lastBuildDate><atom:link href="/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 13:42:51 +0800</lastBuildDate><atom:link href="https://wangjun521.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>页面滚动</title>
-      <link>/2021/%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</link>
+      <link>https://wangjun521.github.io/2021/003/</link>
       <pubDate>Fri, 12 Mar 2021 13:42:51 +0800</pubDate>
       
-      <guid>/2021/%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/</guid>
+      <guid>https://wangjun521.github.io/2021/003/</guid>
       <description>scrollingElement 该对象可以非常兼容地获取 scrollTop、scrollHeight 等属性，在移动端跟 PC 端都屡试不爽document.scrollingE</description>
     </item>
     
     <item>
       <title>键盘按键事件详解</title>
-      <link>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://wangjun521.github.io/2021/002/</link>
       <pubDate>Fri, 12 Mar 2021 13:41:34 +0800</pubDate>
       
-      <guid>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://wangjun521.github.io/2021/002/</guid>
       <description>KeyDown 触发后，不一定触发 KeyUp，当 KeyDown 按下后，拖动鼠标，那么将不会触发 KeyUp 事件。 KeyPress 主要用来捕获数字(注意：包括 Shift+数字的符号)、字母（注</description>
     </item>
     
     <item>
       <title>js的一些tips</title>
-      <link>/2021/js%E7%9A%84%E4%B8%80%E4%BA%9Btips/</link>
+      <link>https://wangjun521.github.io/2021/001/</link>
       <pubDate>Fri, 12 Mar 2021 13:32:01 +0800</pubDate>
       
-      <guid>/2021/js%E7%9A%84%E4%B8%80%E4%BA%9Btips/</guid>
+      <guid>https://wangjun521.github.io/2021/001/</guid>
       <description>数组中根据对象某一属性排序 function compare(property) { return function(a, b) { var value1 = a[property]; var value2 = b[property]; return value1 - value2; }; } 数据去重 function removeRepeatArray(arr) { return arr.filter(function(item, index, self) { return self.indexOf(item) === index; }); } 数组打乱顺序 function upsetArr(arr) { return arr.sort(function() { return Math.random() - 0.5; }); }</description>
     </item>
     

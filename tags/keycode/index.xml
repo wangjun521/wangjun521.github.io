@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>keycode on 青山几重的博客</title>
-    <link>/tags/keycode/</link>
+    <link>https://wangjun521.github.io/tags/keycode/</link>
     <description>Recent content in keycode on 青山几重的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 12 Mar 2021 13:41:34 +0800</lastBuildDate><atom:link href="/tags/keycode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 13:41:34 +0800</lastBuildDate><atom:link href="https://wangjun521.github.io/tags/keycode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>键盘按键事件详解</title>
-      <link>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://wangjun521.github.io/2021/002/</link>
       <pubDate>Fri, 12 Mar 2021 13:41:34 +0800</pubDate>
       
-      <guid>/2021/%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE%E4%BA%8B%E4%BB%B6%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://wangjun521.github.io/2021/002/</guid>
       <description>KeyDown 触发后，不一定触发 KeyUp，当 KeyDown 按下后，拖动鼠标，那么将不会触发 KeyUp 事件。 KeyPress 主要用来捕获数字(注意：包括 Shift+数字的符号)、字母（注</description>
     </item>
     
