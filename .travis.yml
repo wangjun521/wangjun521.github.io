@@ -20,18 +20,18 @@ script:
   # 运行hugo命令
   - hugo
 
-after_script:
-  # 部署
-  - cd ./public
-  - git init
-  - git config user.name "wangjun"
-  - git config user.email "wangjun20101120@163.com"
-  - git add .
-  - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-  # Github Pages
-  - git push --force --quiet "https://$GITHUB_TOKEN@${GH_REF}" main:main
-  # Github Pages
-  - git push --quiet "https://$GITHUB_TOKEN@${GH_REF}" main:main --tags
+# after_script:
+#   # 部署
+#   - cd ./public
+#   - git init
+#   - git config user.name "wangjun"
+#   - git config user.email "wangjun20101120@163.com"
+#   - git add .
+#   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+#   # Github Pages
+#   - git push --force --quiet "https://$GITHUB_TOKEN@${GH_REF}" main:main
+#   # Github Pages
+#   - git push --quiet "https://$GITHUB_TOKEN@${GH_REF}" main:main --tags
 
 env:
  global:
@@ -45,6 +45,6 @@ deploy:
   # target-branch: main # 要将静态站点文件发布到哪个分支
   github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
   # fqdn:  # 如果是自定义域名，此处要填
-  keep-history: false # 是否保持target-branch分支的提交记录
+  keep-history: true # 是否保持target-branch分支的提交记录
   on:
     branch: main # 博客源码的分支
