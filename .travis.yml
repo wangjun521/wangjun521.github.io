@@ -48,4 +48,4 @@ deploy:
   keep-history: true # 是否保持target-branch分支的提交记录
   allow-empty-commit: true
   on:
-    all_branches: true # 博客源码的分支
+    branch: main # 博客源码的分支
