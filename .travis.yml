@@ -47,4 +47,6 @@ deploy:
   # fqdn:  # 如果是自定义域名，此处要填
   keep-history: true # 是否保持target-branch分支的提交记录
   on:
-    branch: main # 博客源码的分支
+    branches:
+      only:
+        - main # 博客源码的分支
