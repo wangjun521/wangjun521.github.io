@@ -45,8 +45,6 @@ deploy:
   # target-branch: main # 要将静态站点文件发布到哪个分支
   github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
   # fqdn:  # 如果是自定义域名，此处要填
-  keep-history: true # 是否保持target-branch分支的提交记录
+  keep-history: false # 是否保持target-branch分支的提交记录
   on:
-    branches:
-      only:
-        - main # 博客源码的分支
+    branch: main # 博客源码的分支
