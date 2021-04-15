@@ -5,9 +5,9 @@ go:
 
 # Specify which branches to build using a safelist
 # 分支白名单限制：只有 master 分支的提交才会触发构建
-# branches:
-#   only:
-#     - dev
+branches:
+  only:
+    - dev
 
 install:
   # 安装最新的hugo
@@ -38,13 +38,13 @@ env:
    # Github Pages
    - GH_REF: github.com/wangjun521/wangjun521.github.io.git
 
-deploy:
-  provider: pages # 重要，指定这是一份github pages的部署配置
-  skip-cleanup: true # 重要，不能省略
-  local-dir: public # 静态站点文件所在目录
-  # target-branch: main # 要将静态站点文件发布到哪个分支
-  github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
-  # fqdn:  # 如果是自定义域名，此处要填
-  keep-history: true # 是否保持target-branch分支的提交记录
-  on:
-    branch: main # 博客源码的分支
+# deploy:
+#   provider: pages # 重要，指定这是一份github pages的部署配置
+#   skip-cleanup: true # 重要，不能省略
+#   local-dir: public # 静态站点文件所在目录
+#   # target-branch: main # 要将静态站点文件发布到哪个分支
+#   github-token: $GITHUB_TOKEN # 重要，$GITHUB_TOKEN是变量，需要在GitHub上申请、再到配置到Travis
+#   # fqdn:  # 如果是自定义域名，此处要填
+#   keep-history: true # 是否保持target-branch分支的提交记录
+#   on:
+#     branch: main # 博客源码的分支
