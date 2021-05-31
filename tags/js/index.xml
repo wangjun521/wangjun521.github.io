@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>js - 标签 - 青山几重的博客</title>
+        <link>https://wangjun521.github.io/tags/js/</link>
+        <description>js - 标签 - 青山几重的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 12 Mar 2021 13:42:51 &#43;0800</lastBuildDate><atom:link href="https://wangjun521.github.io/tags/js/" rel="self" type="application/rss+xml" /><item>
+    <title>页面滚动</title>
+    <link>https://wangjun521.github.io/003/</link>
+    <pubDate>Fri, 12 Mar 2021 13:42:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://wangjun521.github.io/003/</guid>
+    <description><![CDATA[scrollingElement 该对象可以非常兼容地获取 scrollTop、scrollHeight 等属性，在移动端跟 PC 端都屡试不爽document.scrollingE]]></description>
+</item><item>
+    <title>键盘按键事件详解</title>
+    <link>https://wangjun521.github.io/002/</link>
+    <pubDate>Fri, 12 Mar 2021 13:41:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://wangjun521.github.io/002/</guid>
+    <description><![CDATA[KeyDown 触发后，不一定触发 KeyUp，当 KeyDown 按下后，拖动鼠标，那么将不会触发 KeyUp 事件。 KeyPress 主要用来捕获数字(注意：包括 Shift+数字的符号)、字母（注]]></description>
+</item><item>
+    <title>js的一些tips</title>
+    <link>https://wangjun521.github.io/001/</link>
+    <pubDate>Fri, 12 Mar 2021 13:32:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://wangjun521.github.io/001/</guid>
+    <description><![CDATA[数组中根据对象某一属性排序 1 2 3 4 5 6 7 function compare(property) { return function(a, b) { var value1 = a[property]; var value2 = b[property]; return value1 - value2; }; } 数据去重 1 2 3 4 5 function removeRepeatArray(arr) { return arr.filter(function(item, index, self) { return self.indexOf(item) === index; }); } 数组打乱顺序]]></description>
+</item></channel>
+</rss>
